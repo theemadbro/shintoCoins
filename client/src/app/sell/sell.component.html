@@ -1,0 +1,28 @@
+<div id="wrapper">
+	<h1>{{title}}</h1><br>
+	<h2>ShintoCoin Value: ${{sellinfo.value}}.00</h2>
+	<h2 id="balance">Your Balance: {{sellinfo.balance}}</h2>
+	<form (submit)="sellCoins()"><table>
+		<tbody>
+			<tr>
+				<td>Sell Amount</td>
+				<td>
+					<input
+						type="number" 
+						name="amount"
+						required
+						placeholder="eg: 5" 
+						min=0
+						max={{sellinfo.balance}}
+						[(ngModel)]="amount"
+					>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Confirm Transaction"></td>
+				<td><span id="error" *ngIf="errors">{{errors}}</span></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+</div>

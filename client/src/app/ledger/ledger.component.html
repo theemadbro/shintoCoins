@@ -1,0 +1,20 @@
+<div id="wrapper">
+	<h1>{{title}}</h1><br><br>
+	<div>
+		<table>
+			<tbody>
+				<tr>
+					<th>Action</th>
+					<th>Amount</th>
+					<th>Value</th>
+				</tr>
+				<tr *ngFor="let i of TRXs">
+					<td>{{i.type}}</td>
+					<td>{{i.amount}}</td>
+					<td>${{i.value}}</td>
+					<td><button [routerLink]="['/transaction/'+i.id]">Details</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

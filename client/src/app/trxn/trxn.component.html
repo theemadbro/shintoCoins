@@ -1,0 +1,9 @@
+<div *ngIf="details" class="wrapper">
+	<h1>{{title}}</h1><br>
+	<h3>Transaction #{{details.id}}</h3>
+	<p>Type: {{details.type}}</p>
+	<p>Quantity: {{details.amount}}</p>
+	<p>Value at time of transaction: ${{details.value}}.00</p>
+	<p>{{details.created_at}}</p>
+</div>
+<button [routerLink]="['/ledger']">Go Back</button>

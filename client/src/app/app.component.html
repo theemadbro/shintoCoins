@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <div class="header" style="text-align:center">
+        <p>
+            <a href="/home" [routerLink]="['/home']"><button>Home</button></a>
+            <a href="/mine" [routerLink]="['/mine']"><button>Mine Coins</button></a>
+            <a href="/buy" [routerLink]="['/buy']"><button>Buy Coins</button></a>
+            <a href="/sell" [routerLink]="['/sell']"><button>Sell Coins</button></a>
+            <a href="/ledger" [routerLink]="['/ledger']"><button>Browse Ledger</button></a>
+        </p>
+        <img alt="codingdojo" width="100" height="100" src="assets/coding-dojo.jpg">
+    </div>
+    <router-outlet></router-outlet>
+</div>

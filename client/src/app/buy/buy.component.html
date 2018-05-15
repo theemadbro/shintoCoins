@@ -1,0 +1,27 @@
+<div id="wrapper">
+	<h1>{{title}}</h1><br>
+	<h2>ShintoCoin Value: ${{buyinfo.value}}.00</h2>
+	<h2 id="balance">Your Balance: {{buyinfo.balance}}</h2>
+	<form (submit)="buyCoins()"><table>
+		<tbody>
+			<tr>
+				<td>Purchase Amount</td>
+				<td>
+					<input 
+						type="number" 
+						name="amount"
+						required
+						placeholder="eg: 5" 
+						min="1" 
+						max="20"
+						[(ngModel)]="amount"
+					>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Confirm Transaction"></td>
+			</tr>
+		</tbody>
+	</table>
+	</form>
+</div>
